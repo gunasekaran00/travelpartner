@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image" href="C:\Users\gunasekaran.d\OneDrive\final logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image" href="C:\Users\Public\Pictures\Sample Pictures\final logo.png">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1c1c1c;
+  color:white;
+}
+
+footer.states{
+background-color:#d0f0c0;
+color:black;
+}
+footer.copy{
+background-color:#307D7E;
+text-align:center;
+font-size:24px;
+color:black;
+}
+
+span.a {
+  display: inline-block;
+  width: 290px;
+  height: 300px;
+  padding: 5px; 
+}
+
+img.popu{
+width:400px;height:300px;
+vertical-align: middel;
+border-radius:10px;
+}
+
+.cover{
+width:1200px;
+height:200px;
+padding-top:10px;
+}
+
+.title {
+  color:green;
+  font-style:underline;
+}
+
+/*read more and read less*/
+
+#more{
+display:none;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #3f602b;
+  margin:0;
+  
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: lightgreen;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/*slides side by side*/
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 3000px;
+  position: relative;
+  margin: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/* overlay and side by side  */
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* overlay on the image  */
+* {box-sizing: border-box;}
+
+.container {
+  position: relative;
+  width: 300%;
+  max-width: 300px;
+}
+
+.image {
+  display: block;
+  width: 300%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 400px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+
+/*side by side*/
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+/*overlay of image*/
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+ 
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Holiday Ideas
+     <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+
+  
+
+  <div class="dropdown">
+    <button class="dropbtn">Genres
+     <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+
+  <div class="dropdown">
+    <button class="dropbtn">Popular Places
+     <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+
+  <a href="#map">Map</a>
+
+ <a href="#contact">Contact us</a>
+
+</div>
+		
+        <img src="C:\Users\gunasekaran.d\Pictures\Saved Pictures\project pics\cover.jpg" alt="title" class="cover">
+
+  <!--paragraph read more and read less-->
+
+
+  <p >One of the oldest civilisations in the world, India is a mosaic of multicultural experiences. With a rich heritage and myriad attractions, the country is among the most popular tourist destinations in the world. It covers an area of 32, 87,263 sq. km, extending from the snow-covered Himalayan heights to the tropical rain forests of the south. As the 7th largest country in the world, India stands apart from the rest of Asia, marked off as it is by mountains and the sea, which give the country a distinct geographical entity.<br><span id="dots">...</span>
+
+	<span id="more"><br>Fringed by the Great Himalayas in the north, it stretches southwards and at the Tropic of Cancer, tapers off into the Indian Ocean between the Bay of Bengal on the east and the Arabian Sea on the west. As you travel the expanse of the country, you are greeted by diverse nuances of cuisines, faiths, arts, crafts, music, nature, lands, tribes, history and adventure sports. India has a mesmeric conflation of the old and the new. As the bustling old bazaars rub shoulders with swanky shopping malls, and majestic monuments accompany luxurious heritage hotels, the quintessential traveller can get the best of both worlds. Head to the mountains, enjoy a beach retreat or cruise through the Talore for all.</span></p>
+
+<button onclick="myFunction()" id="myBtn" >Read more</button>
+
+
+
+  <!--slides side by side-->
+
+  <h3>Top Trending India Holiday Destinations</h3>
+<div class="slideshow-container">
+  <div class="mySlides1">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1551594278-0162be5d00c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80
+"  alt="Snow" >
+    <div class="overlay">Delhi for history and food</div>
+ </div>
+  </div>
+  <div class="column">
+  <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1585506942812-e72b29cef752?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=369&q=80
+" alt="Forest" >
+    <div class="overlay">Agar for the iconic Taj Mahal.</div>
+ </div>
+  </div>
+  <div class="column">
+  <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80
+" alt="Mountains" >
+    <div class="overlay">Rajasthan for forts and palaces.</div>
+</div>
+  </div>
+ </div>
+  </div>
+  </div>
+
+  <div class="mySlides1">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1614164948797-f5e92b825a62?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80
+" alt="Snow" >
+    <div class="overlay">The Ganges(Varanasi) for spirituality.</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1586617356423-52763004deac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=370&q=80
+" alt="Forest" >
+    <div class="overlay">Ranthambore for wildlife.</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=667&q=80
+" alt="Mountains" >
+    <div class="overlay">goa for Beaches.</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <div class="mySlides1">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1593417033942-bcdf26b74700?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=736&q=80" alt="Snow" >
+    <div class="overlay">Kerala Backwater for relaxation</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80
+" alt="Forest" >
+    <div class="overlay">Munnar for tea and nature</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1572146462570-2129a547e6dd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80" alt="Mountains" >
+    <div class="overlay">Madurai for South Indian culture</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+  <span class="dot" onclick="plusSlides(-1, 0)"></span> 
+  <span class="dot" onclick="plusSlides(1, 0)"></span> 
+  <span class="dot" onclick="plusSlides(2, 0)"></span> 
+</div>
+
+
+
+<h3>Spirtual Places</h3>
+<div class="slideshow-container">
+  <div class="mySlides2">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
+" alt="Snow">
+    <div class="overlay">Varanasi</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1609876634007-76c04c5863cf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80
+" alt="Forest">
+    <div class="overlay">Tirupati</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1563124155-dbc34ba9bedb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80
+" alt="Mountains">
+    <div class="overlay">Haridwar</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <div class="mySlides2">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1558288462-5d395734c5dd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80
+" alt="Snow">
+    <div class="overlay">Rishikesh</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1612438214708-f428a707dd4e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80
+" alt="Forest">
+    <div class="overlay">Kedarnath</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://www.hindugodwallpaper.com/images/gods/zoom/95_Rameshwaram%20Temple.jpg
+" alt="Mountains">
+    <div class="overlay">Rameswaram</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <div class="mySlides2">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1572146462570-2129a547e6dd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80
+" alt="Snow">
+    <div class="overlay">Madurai</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://image.shutterstock.com/image-photo/palani-tamil-nadu-india-april-600w-1693845859.jpg
+" alt="Forest">
+    <div class="overlay">Palani</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1574601098067-706abb2a949a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=845&q=80
+" alt="Mountains">
+    <div class="overlay">Amritsar</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+  
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="plusSlides(-1, 1)"></span> 
+  <span class="dot" onclick="plusSlides(1, 1)"></span> 
+  <span class="dot" onclick="plusSlides(2, 1)"></span> 
+</div>
+
+
+
+<h3>Adventure Places</h3>
+<div class="slideshow-container">
+  <div class="mySlides3">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://image.shutterstock.com/image-photo/view-point-nandi-hills-hill-600w-1646231992.jpg
+" alt="Snow">
+    <div class="overlay">Nandi Hills Bengaluru(paraglide)</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://image.shutterstock.com/image-photo/paragliding-aerial-sport-where-you-600w-445791385.jpg
+" alt="Forest" >
+    <div class="overlay">Bir Billing Himachal Pradesh(paraglide)</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://image.shutterstock.com/image-photo/pawana-lake-during-sunsetsunrise-lonavla-600w-1528297406.jpg" alt="Mountains">
+    <div class="overlay">Pawana Dam Maharashtra(paraglide)</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <div class="mySlides3">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://image.shutterstock.com/image-photo/rafting-on-zanskar-river-confluence-600w-1050620129.jpg
+" alt="Snow">
+    <div class="overlay">The Zanskar Ladakh(river rafting)</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://image.shutterstock.com/image-photo/leh-ladakh-india-july-10-600w-1073065847.jpg
+" alt="Forest">
+    <div class="overlay">Ladakh(mountain biking)</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1572547564070-305733e0243f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80
+" alt="Mountains">
+    <div class="overlay">Himachal(mountain biking)</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <div class="mySlides3">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1594976007664-44b71a70aeea?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80
+" alt="Snow">
+    <div class="overlay">valley of flowers Garhwal(trekking)</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://media.istockphoto.com/photos/panoramic-view-of-shivling-and-meru-peaks-picture-id871986370?s=612x612
+" alt="Forest">
+    <div class="overlay">Mt.shivling(Peak climbing)</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://media.istockphoto.com/photos/hot-balloon-air-over-jispa-town-lahaul-valley-himachal-pradesh-india-picture-id869594152?s=612x612
+" alt="Mountains">
+    <div class="overlay">Himachal(hot air balloon)</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+  
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="plusSlides(-1, 2)"></span> 
+  <span class="dot" onclick="plusSlides(1, 2)"></span> 
+  <span class="dot" onclick="plusSlides(2, 2)"></span> 
+</div>
+
+
+
+<h3>Caltural Places</h3>
+<div class="slideshow-container">
+  <div class="mySlides4">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1599831069477-b2acdc0bcb91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80
+" alt="Snow">
+    <div class="overlay">Varanasi,Uttar Pradesh spiritual city</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1506268452458-bfb3757ed859?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80
+" alt="Forest">
+    <div class="overlay">Rishikesh,Yoga capital of the world</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1590123717647-de5b78ed762e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80
+" alt="Mountains">
+    <div class="overlay">Fort kochi,Kerala hidden gem of God's</div>
+</div>
+  </div>
+</div>
+
+  </div>
+  </div>
+
+  <div class="mySlides4">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1588096344356-9b497caeeb64?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=718&q=80
+" alt="Snow">
+    <div class="overlay">Amritsar,Punjab land of world peace</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1574312078847-e0f68bcc3175?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80
+" alt="Forest">
+    <div class="overlay">Mysore,Karnataka City of palaces</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://media.istockphoto.com/photos/temple-of-lingarja-bhubarnesvar-picture-id1281826611?s=612x612
+" alt="Mountains">
+    <div class="overlay">Puri,Golden trinagle of Orissa</div>
+</div>
+  </div>
+</div>
+
+  </div>
+  </div>
+<!--
+  <div class="mySlides4">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="img_snow.jpg" alt="Snow" >
+    <div class="overlay">empty</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="img_forest.jpg" alt="Forest" >
+    <div class="overlay">empty</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="img_mountains.jpg" alt="Mountains" >
+    <div class="overlay">empty</div>
+</div>
+  </div>
+ 
+</div>
+
+  </div>
+  </div>
+  -->
+
+  <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+  
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="plusSlides(-1, 3)"></span> 
+  <span class="dot" onclick="plusSlides(1, 3)"></span> 
+<!--  <span class="dot" onclick="plusSlides(2, 3)"></span> -->
+</div>
+
+
+
+<h3>Hill Station</h3>
+<div class="slideshow-container">
+  <div class="mySlides5">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1592330925569-ad9a98803616?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1059&q=80
+" alt="Snow" >
+    <div class="overlay">Manali</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1593183981460-e9276b5a5587?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=820&q=80
+" alt="Forest" >
+    <div class="overlay">Shimla</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1576054132013-d848d0fa7d93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80
+" alt="Mountains" >
+    <div class="overlay">The Nilgiris</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <div class="mySlides5">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1599922760936-e840fa373d8d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=843&q=80
+" alt="Snow" >
+    <div class="overlay">Coorg</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1591420699297-88e82958f324?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80
+" alt="Forest" >
+    <div class="overlay">Munnar</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1509016491329-3da6c5ba7555?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80
+" alt="Mountains" >
+    <div class="overlay">Dharamshala</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <div class="mySlides5">
+  <div class="mySlides fade">
+    <div class="row">
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1602281828097-710edc575f4b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt="Snow" >
+    <div class="overlay">Darjeeling</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1610221134608-e5afdeb82859?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Forest" >
+    <div class="overlay">Kodaikanal</div>
+</div>
+  </div>
+  <div class="column">
+   <div class="container">
+    <img class="popu" src="https://images.unsplash.com/photo-1563124155-dbc34ba9bedb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80
+" alt="Mountains" >
+    <div class="overlay">Haridwar</div>
+</div>
+  </div>
+</div>
+  </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 4)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 4)">&#10095;</a>
+  
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="plusSlides(-1, 4)"></span> 
+  <span class="dot" onclick="plusSlides(1, 4)"></span> 
+  <span class="dot" onclick="plusSlides(2, 4)"></span> 
+</div>
+
+<hr>
+
+<footer class="states">
+<span class="a">
+	<h4>States in India:</h4>
+	<a href="">Andhra Pradesh</a><br>
+	<a href="">Andaman and Nicobar Islands</a><br>
+	<a href="">Arunachal Pradesh</a><br>
+	<a href="">Assam	</a><br>
+	<a href="">Bihar</a><br>
+	<a href="">Chhattisgarh</a><br>
+	<a href="">Chandigarh</a><br>
+	<a href="">Dadra & Nagar Haveli and Daman & Diu	</a><br>
+	<a href="">Delhi	</a><br>
+	<a href="">Goa</a><br>
+	<a href="">Gujarat</a><br>
+	<a href="">Haryana</a><br>
+		
+</span>  
+<span class="a">
+	<a href="">Himachal Pradesh</a><br>
+	<a href="">Jammu and Kashmir</a><br>
+	<a href="">Jharkhand</a><br>	
+	<a href="">Karnataka</a><br>
+	<a href="">Kerala</a><br>
+	<a href="">Lakshadweep</a><br>
+	<a href="">Ladakh</a><br>	
+	<a href="">Madhya Pradesh</a><br>
+	<a href="">Maharashtra	</a><br>
+	<a href="">Manipur</a><br>
+	<a href="">Meghalaya</a><br>
+	<a href="">Mizoram</a><br>
+	
+</span> 
+<span class="a">
+	<a href="">Nagaland	</a><br>
+	<a href="">Odisha</a><br>
+	<a href="">Puducherry</a><br>
+	<a href="">Punjab</a><br>
+	<a href="">Rajasthan</a><br>
+	<a href="">Sikkim</a><br>
+	<a href="">Tamil Nadu</a><br>
+	<a href="">Telangana</a><br>
+	<a href="">Tripura</a><br>
+	<a href="">Uttar Pradesh</a><br>
+	<a href="">Uttarakhand</a><br>
+	<a href="">West Bengal</a><br>
+</span> 
+<span class="a">
+<dl>
+<h3>contact us:</h3>
+	<dh>phone no:</dh>
+		<dd><a href="tel:+918072318935">+918072318935<a></dd>
+		<dd><a href="tel:+918111058792">+918111058792<a></dd>
+		<dd><a href="tel:+918754248207">+918754248207<a></dd>
+		<dd><a href="tel:+918529659545">+918529659545<a></dd>
+		
+		<br>
+	<dh>email id:</dh>
+		<dd><a href="mailto:mdijas2000@gmail.com">mdijas2000@gmail.com</a></dd>
+		<dd><a href="mailto:gunasekar.devaraj00@gmail.com">gunasekar.devaraj00@gmail.com</a></dd>
+		<dd><a href="mailto:rxaravindrio07@gmail.com">rxaravindrio07@gmail.com</a></dd>
+		<dd><a href="mailto:puvipalanisamy163@gmail.com">puvipalanisamy163@gmail.com</a></dd>
+		
+</dl>
+</span>
+</footer>
+<footer class="copy">
+<div>
+©CopyRight 2020, TravelPartner Pvt. Ltd
+</div>
+</footer>
+
+
+<script>
+var slideIndex = [1,1,1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"]
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+showSlides(1, 3);
+showSlides(1, 4);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex[no] = n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+   var dots = document.getElementsByClassName("dot");
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  x[slideIndex[no]-1].style.display = "block"; 
+  dots[slideIndex[no]-1].className += " active";
+
+}
+
+function myFunction()
+{
+var dots= document.getElementById("dots");
+var moreText= document.getElementById("more");
+var btnText= document.getElementById("myBtn");
+
+if(dots.style.display==="none"){
+dots.style.display= "inline";
+btnText.innerHTML= "Read more";
+moreText.style.display= "none";
+}
+else{
+dots.style.display= "none";
+btnText.innerHTML= "Read less";
+moreText.style.display= "inline";
+}
+}
+
+</script>
+
+</body>
+</html>
